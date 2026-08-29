@@ -24,7 +24,7 @@ In Japanese professional prose, vocabulary density out-discriminates rhythm (AUC
 
 ## Install
 
-User scope everywhere. Replace `YOUR_ORG` with the fork.
+User scope everywhere. The commands below use this repository; forks should replace `CoderK-star` with their own owner.
 
 See [README.md](README.md) for Claude Code, Codex, Grok Build, Antigravity, `install.sh`, and `install.ps1` (Windows junctions).
 

@@ -4,11 +4,11 @@
 # gets a copy. For project-scope installs, see README.md.
 #
 # One-liner (clones to ~/.jp-sepia, or $JP_SEPIA_HOME, then installs):
-#   curl -fsSL https://raw.githubusercontent.com/YOUR_ORG/jp-sepia/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/CoderK-star/jp-sepia/main/install.sh | bash
 # Re-run the same line to update everything.
 set -euo pipefail
 
-REPO_URL="${JP_SEPIA_REPO:-https://github.com/YOUR_ORG/jp-sepia.git}"
+REPO_URL="${JP_SEPIA_REPO:-https://github.com/CoderK-star/jp-sepia.git}"
 CLONE_DIR="${JP_SEPIA_HOME:-$HOME/.jp-sepia}"
 
 # Piped via curl (or run outside a checkout): clone/update first, then re-exec

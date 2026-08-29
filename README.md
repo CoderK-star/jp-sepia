@@ -31,27 +31,27 @@
 ### Claude Code
 
 ```bash
-claude plugin marketplace add YOUR_ORG/jp-sepia
+claude plugin marketplace add CoderK-star/jp-sepia
 claude plugin install jp-sepia@jp-sepia --scope user
 ```
 
 ### Codex
 
 ```bash
-codex plugin marketplace add YOUR_ORG/jp-sepia
+codex plugin marketplace add CoderK-star/jp-sepia
 codex plugin add jp-sepia@jp-sepia
 ```
 
 ### Grok Build
 
 ```bash
-grok plugin install YOUR_ORG/jp-sepia --trust
+grok plugin install CoderK-star/jp-sepia --trust
 ```
 
 ### Antigravity
 
 ```bash
-git clone https://github.com/YOUR_ORG/jp-sepia.git ~/.jp-sepia
+git clone https://github.com/CoderK-star/jp-sepia.git ~/.jp-sepia
 mkdir -p ~/.gemini/config/skills ~/.gemini/antigravity/global_workflows
 cp -R ~/.jp-sepia/skills/jp-sepia ~/.gemini/config/skills/jp-sepia
 cp ~/.jp-sepia/.agents/workflows/jp-sepia.md ~/.gemini/antigravity/global_workflows/jp-sepia.md

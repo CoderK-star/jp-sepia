@@ -4,6 +4,6 @@
   "description": "日本語の脱 AI 執筆。小説は物語構造から直し、実務文書は媒体ルールに通す。語彙と文のリズムは日本語で測った指紋を使う。操作: write / review / refactor / recreate。",
   "skills": "./skills/",
   "license": "MIT",
-  "repository": "https://github.com/YOUR_ORG/jp-sepia",
-  "homepage": "https://github.com/YOUR_ORG/jp-sepia"
+  "repository": "https://github.com/CoderK-star/jp-sepia",
+  "homepage": "https://github.com/CoderK-star/jp-sepia"
 }

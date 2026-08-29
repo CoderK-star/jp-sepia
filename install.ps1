@@ -7,7 +7,7 @@
 
 $ErrorActionPreference = "Stop"
 
-$RepoUrl = if ($env:JP_SEPIA_REPO) { $env:JP_SEPIA_REPO } else { "https://github.com/YOUR_ORG/jp-sepia.git" }
+$RepoUrl = if ($env:JP_SEPIA_REPO) { $env:JP_SEPIA_REPO } else { "https://github.com/CoderK-star/jp-sepia.git" }
 $CloneDir = if ($env:JP_SEPIA_HOME) { $env:JP_SEPIA_HOME } else { Join-Path $HOME ".jp-sepia" }
 
 function Test-SkillHere {
