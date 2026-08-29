@@ -28,6 +28,16 @@ User scope everywhere. The commands below use this repository; forks should repl
 
 See [README.md](README.md) for Claude Code, Codex, Grok Build, Antigravity, `install.sh`, and `install.ps1` (Windows junctions).
 
+If you already have a checkout, update that checkout and rerun its installer:
+
+```bash
+cd /path/to/jp-sepia
+git pull --ff-only
+bash ./install.sh
+```
+
+`~/.jp-sepia` is only the path used when the installer created a clone there; it is not the path of every checkout.
+
 ## What changed from sepia
 
 - Canonical skill is Japanese, with Japanese examples.

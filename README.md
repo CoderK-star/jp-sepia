@@ -66,6 +66,26 @@ cp ~/.jp-sepia/.agents/workflows/jp-sepia.md ~/.gemini/antigravity/global_workfl
 
 `~/.jp-sepia` へクローン（`JP_SEPIA_HOME` で上書き）し、四プラットフォームへユーザー範囲で入れる。同じ行の再実行が更新。中を見てから入れたいときは、チェックアウトしてから `./install.sh`。
 
+### 更新
+
+すでにこのリポジトリをチェックアウトしている場合は、そのディレクトリを更新する。`~/.jp-sepia` は、インストーラがそこへクローンされた場合にだけ存在するパスである。
+
+```bash
+cd /path/to/jp-sepia
+git pull --ff-only
+bash ./install.sh
+```
+
+たとえばこのリポジトリが Git Bash の `/c/jp-sepia` にあるなら、`cd /c/jp-sepia` とする。`git -C ~/.jp-sepia ...` は、`~/.jp-sepia` を使う方式でインストールした場合だけ実行する。
+
+Windows PowerShell では、チェックアウトのディレクトリで次を実行する。
+
+```powershell
+Set-Location C:\path\to\jp-sepia
+git pull --ff-only
+.\install.ps1
+```
+
 ### Windows
 
 ```powershell
