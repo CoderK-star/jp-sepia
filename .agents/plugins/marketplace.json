@@ -1,0 +1,16 @@
+{
+  "name": "jp-sepia",
+  "interface": {
+    "displayName": "jp-sepia"
+  },
+  "plugins": [
+    {
+      "name": "jp-sepia",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "category": "Writing"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "jp-sepia — 日本語の脱 AI 執筆"
+  short_description: "日本語の小説と実務文を、人間が書いたように読める状態へ直す。"
+
+policy:
+  allow_implicit_invocation: true

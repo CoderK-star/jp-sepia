@@ -1,0 +1,10 @@
+{
+  "name": "jp-sepia",
+  "version": "0.1.0",
+  "description": "日本語の脱 AI 執筆。小説は物語構造から直し、実務文書は媒体ルールに通す。語彙と文のリズムは日本語で測った指紋を使う。操作: write / review / refactor / recreate。",
+  "author": {
+    "name": "jp-sepia contributors"
+  },
+  "repository": "https://github.com/YOUR_ORG/jp-sepia",
+  "homepage": "https://github.com/YOUR_ORG/jp-sepia"
+}

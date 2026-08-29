@@ -1,0 +1,14 @@
+{
+  "name": "jp-sepia",
+  "owner": {
+    "name": "jp-sepia contributors"
+  },
+  "description": "日本語文章から AI っぽさを落とすスキル。小説は物語構造、実務文書は媒体ごとのルール。英語版 sepia の設計を日本語の実測に差し替えたもの。",
+  "plugins": [
+    {
+      "name": "jp-sepia",
+      "source": "./",
+      "description": "6 種の文書経路、4 操作（write / review / refactor / recreate）、小説 30 特徴ルーブリック、日本語モデル指紋。"
+    }
+  ]
+}

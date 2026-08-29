@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "operations": ["write", "review", "refactor", "recreate"],
+  "documentTypes": {
+    "fiction": "narrative",
+    "release-notes": "release-notes",
+    "dev-reply": "dev-replies",
+    "postmortem": "postmortems",
+    "ticket": "tickets",
+    "tech-article": "tech-articles",
+    "general-prose": "professional-and-style"
+  },
+  "cases": [
+    {
+      "id": "fiction",
+      "fixture": "fixtures/fiction.md",
+      "style": "常体",
+      "requiredFacts": ["森田澪", "2026年5月14日", "京都駅"],
+      "forbiddenTerms": ["銀河連邦", "実話"],
+      "manualFocus": "テーマの説明過多、単線因果、結末の安易な受容を個別に診断する。"
+    },
+    {
+      "id": "release-notes",
+      "fixture": "fixtures/release-notes.md",
+      "style": "敬体",
+      "requiredFacts": ["v2.4.0", "2026年4月12日", "CSV エクスポート"],
+      "forbiddenTerms": ["完全無停止", "AI搭載"],
+      "manualFocus": "利用者影響、変更根拠、既知の制約が確認できるかを見る。"
+    },
+    {
+      "id": "dev-reply",
+      "fixture": "fixtures/dev-reply.md",
+      "style": "常体",
+      "requiredFacts": ["PR #418", "src/auth/session.ts:84", "refreshToken"],
+      "forbiddenTerms": ["セキュリティ上問題ない", "マージ済み"],
+      "manualFocus": "結論先出し、file:line の根拠、不要な賞賛の削除を確認する。"
+    },
+    {
+      "id": "postmortem",
+      "fixture": "fixtures/postmortem.md",
+      "style": "常体",
+      "requiredFacts": ["09:12 JST", "10:03 JST", "checkout-api"],
+      "forbiddenTerms": ["個人のミス", "恒久的に解決"],
+      "manualFocus": "人物を責めず機構を記述し、時刻、行き止まり、担当付き対策を残す。"
+    },
+    {
+      "id": "ticket",
+      "fixture": "fixtures/ticket.md",
+      "style": "常体",
+      "requiredFacts": ["MOB-231", "Android 15", "3.8.1"],
+      "forbiddenTerms": ["iOS", "緊急リリース"],
+      "manualFocus": "表題が成果を示し、受け入れ条件が検証可能かを見る。"
+    },
+    {
+      "id": "tech-article",
+      "fixture": "fixtures/tech-article.md",
+      "style": "常体",
+      "requiredFacts": ["Node.js 22", "AbortSignal.timeout", "30 秒"],
+      "forbiddenTerms": ["万能", "必ず高速"],
+      "manualFocus": "問題起点、条件付きの数値、失敗経路、断定の根拠を確認する。"
+    },
+    {
+      "id": "general-prose",
+      "fixture": "fixtures/general-prose.md",
+      "style": "敬体",
+      "requiredFacts": ["9月3日", "第2会議室", "45分"],
+      "forbiddenTerms": ["全社必須", "録画公開"],
+      "manualFocus": "目的、対象、行動が明確で、過剰な宣言や混在レジスタがないかを見る。"
+    }
+  ],
+  "negativeCases": [
+    {
+      "id": "english-copyedit",
+      "prompt": "Please copyedit this English paragraph for grammar only.",
+      "expectedInvocation": false
+    },
+    {
+      "id": "japanese-factual-qa",
+      "prompt": "日本の消費税率を教えてください。",
+      "expectedInvocation": false
+    },
+    {
+      "id": "code-debugging",
+      "prompt": "この TypeScript の型エラーを直してください。",
+      "expectedInvocation": false
+    }
+  ]
+}
