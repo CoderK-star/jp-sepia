@@ -14,6 +14,9 @@ function fail(message) {
 }
 
 if (manifest.schemaVersion !== 1) fail("schemaVersion must be 1");
+if (manifest.outputPolicy?.default !== "artifact-first-compact") fail("default output policy must be artifact-first-compact");
+if (manifest.outputPolicy?.detailTrigger !== "explicit-user-request") fail("detail trigger must be explicit-user-request");
+if (manifest.outputPolicy?.review !== "diagnosis-only-compact") fail("review output policy must be diagnosis-only-compact");
 if (!Array.isArray(manifest.operations) || manifest.operations.length !== 4) {
   fail("operations must define the four supported operations");
 }
@@ -36,6 +39,14 @@ const expectedTestIds = new Set(
   (manifest.cases ?? []).flatMap((testCase) => (manifest.operations ?? []).map((operation) => `${testCase.id}/${operation}`))
 );
 if (expectedTestIds.size !== 28) fail(`expected 28 expanded tests, got ${expectedTestIds.size}`);
+if (!Array.isArray(manifest.verbosityCases) || manifest.verbosityCases.length !== 2) {
+  fail("verbosityCases must define default and explicit-detail cases");
+} else {
+  const verbosityIds = new Set(manifest.verbosityCases.map((item) => item.id));
+  if (!verbosityIds.has("default-compact") || !verbosityIds.has("explicit-detail")) {
+    fail("verbosityCases must include default-compact and explicit-detail");
+  }
+}
 
 const args = process.argv.slice(2);
 const resultFlag = args.indexOf("--results");
@@ -77,4 +88,5 @@ if (errors.length > 0) {
 } else {
   console.log(`PASS: ${manifest.cases.length} cases × ${manifest.operations.length} operations = ${expectedTestIds.size} tests`);
   console.log(`PASS: ${manifest.negativeCases.length} negative invocation cases defined`);
+  console.log(`PASS: ${manifest.verbosityCases.length} verbosity policy cases defined`);
 }

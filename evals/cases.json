@@ -1,5 +1,10 @@
 {
   "schemaVersion": 1,
+  "outputPolicy": {
+    "default": "artifact-first-compact",
+    "detailTrigger": "explicit-user-request",
+    "review": "diagnosis-only-compact"
+  },
   "operations": ["write", "review", "refactor", "recreate"],
   "documentTypes": {
     "fiction": "narrative",
@@ -83,6 +88,20 @@
       "id": "code-debugging",
       "prompt": "この TypeScript の型エラーを直してください。",
       "expectedInvocation": false
+    }
+  ],
+  "verbosityCases": [
+    {
+      "id": "default-compact",
+      "prompt": "このリリースノートを整えてください。",
+      "expectedOutput": "artifact-first-compact",
+      "maxPreambleSentences": 0
+    },
+    {
+      "id": "explicit-detail",
+      "prompt": "このリリースノートを詳しくレビューし、理由と根拠も説明してください。",
+      "expectedOutput": "detailed",
+      "maxPreambleSentences": null
     }
   ]
 }

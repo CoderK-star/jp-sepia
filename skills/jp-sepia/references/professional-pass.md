@@ -46,14 +46,15 @@
 
 ## 報告の型（review 操作）
 
+既定の報告は短くする。問題がある行だけを引用し、`Failed` と `Verdict` を返す。`Loaded`、`Venue corpus`、`Passed`、全チェック項目の説明は、ユーザーが詳細を求めたときか、判断に必要なときだけ含める。
+
 ```text
 JP-SEPIA REVIEW — <文書種, 会場>
-Loaded: <使ったファイル>
-Venue corpus: <サンプリングした成果物, または "none — 領域の基線">
 Failed: <#n 確認名 — 引用証拠>   （落ちた確認ごとに一行）
-Passed: <番号だけ>
 Verdict: <clean / 孤立ヒット / クラスタ> → <ship / refactor / recreate>
 ```
+
+詳細要求時は、上の `Loaded`、`Venue corpus`、`Passed` を追加し、必要なチェック項目だけを展開する。
 
 ## ホワイトリスト — 型があること ≠ スロップ
 
